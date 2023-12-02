@@ -7,3 +7,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    text-align: center;
+    grid-template-rows: auto minmax(100%, 100svh) auto;
+}
+
+img[alt='logo'] {
+    width: 5rem;
+    aspect-ratio: 1/1;
+}
