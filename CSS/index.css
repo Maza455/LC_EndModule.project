@@ -17,3 +17,34 @@ img[alt='logo'] {
     width: 5rem;
     aspect-ratio: 1/1;
 }
+
+#owl_carousel {
+    width: 100% !important;
+    position: fixed !important;
+}
+.Main {
+   margin:0px ;
+   padding: 0px;
+}
+.homeimg1 {
+background-image: url("./Images/home_img1.jpg");
+height: 100vh;
+background-position:center;
+background-size:cover;
+background-attachment: fixed;
+}
+.homeimg2 {
+background-image: url("./Images/home_img2.jpg");
+height: 100vh;
+background-position:center;
+background-size:cover;
+background-attachment: fixed;
+}
+
+.homeimg3 {
+background-image: url("./Images/home_img3.jpg");
+height: 100vh;
+background-position:center;
+background-size:cover;
+background-attachment: fixed;
+}
