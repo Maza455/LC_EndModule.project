@@ -4,12 +4,207 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E_commerce-site_contact</title>
+
+    <link rel="stylesheet" href="../CSS/contact.css">
 </head>
 <body>
     <h1>Get in Touch</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum alias dicta ducimus saepe quos laudantium tempora, quisquam, error est doloribus libero excepturi iusto pariatur provident voluptate enim quasi modi?</p>
+    <a class="scrollTop" href="#"></a>
 
+<section>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background: indigo;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+            <img src="https://i.postimg.cc/KcCW03ng/pexels-photo-1037992.jpg" alt="logo" height="35" width="45" class="d-inline-block align-text-top mr-2 navbar-logo">
+        </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-    
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-capitalize">
+        <ul class="navbar-nav mr-auto mb-2 mb-lg-0 text-capitalize">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
+            </li>
+                            
+<li class="nav-item text-capitalize">
+    <a class="nav-link" href="./contact.html">Reach Me</a>
+</li>
+                                  
+<li class="nav-item text-capitalize">
+    <a class="nav-link" href="./about.html">About us</a>
+</li>
+
+<!-- <li class="nav-item text-capitalize">
+    <a class="nav-link" href="./login.html">Login</a>
+</li>   -->
+                            
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Category
+    </a>
+
+<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <!-- <li><a class="dropdown-item" href="./mobile.html">Mobile-future plans</a></li> -->
+<li><a class="dropdown-item" href="./books.html">Books</a></li>
+    <!-- <li><a class="dropdown-item" href="./furniture.html">Furniture</a>I'll do it later</li> -->
+<li><a class="dropdown-item" href="./stationery.html">Stationery</a></li>
+
+<li>
+    <hr class="dropdown-divider">
+</li>
+
+<!-- <li><a class="dropdown-item" href="./login.html">Login/Signup= future plans</a></li> -->
+</ul>
+</li>
+<li class="nav-item text-capitalize">
+        <a class="nav-link" href="./cart.html">My Cart</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-dark" type="submit">Search</button>
+                        </form>
+                </div>
+            </div>
+        </nav>
+</section>
+
+<section id="contactMe">
+    <p id="contact-head">Contact Me</p>
+    <p id="contact-message">Do you have any questions? Please do not hesitate to contact me directly. I'll come back to you within a matter of hours to help you.</p>
+
+    <div class="container">
+    <div id="form-footer" class="row">
+        <div style="width: 67%!important;" class="col-md-8">
+        <div class="center-div">
+        <div class="contact-table">
+
+<form action="https://formspree.io/f/xnqklpew" method="POST" id="my-form">
+    <div class="input-container">
+
+<label class="contact-inputs" for="validationCustom01">Your Name:</label>
+    <input type="text" class="form-control contact-inputs-tags" required id="validationCustom01" placeholder="Enter your name" name="name" onchange="validateFormInput()">
+        <p class="invalid-feedback">Invalid name entered. Digits and symbols are not allowed.</p>
+    </div>
+<div class="input-container">
+    <label class="contact-inputs" for="validationCustom02">Your Email:</label>
+        <input type="email" class="form-control contact-input-tags" required id="validationCustom02" placeholder="Enter your email address" name="email" onchange="validateFormInput()">
+
+    <p class="invalid-feedback">Invalid email entered.</p>
+</div>
+
+<div class="input-container">
+    <label class="contact-inputs" for="validationCustom03">Message :</label>
+        <textarea type="text" class="form-control contact-input-tags" required id="validationCustom03" placeholder="Enter your message here . . ." rows="4" name="message"></textarea>
+</div>
+
+<div>
+    <button id="submit-btn" class="btn btn-md btn-outline-primary" type="submit">SUBMIT</button>
+</div>
+</form>
+</div>
+
+</div>
+    <div style="margin-top: 20px;" id="status"></div>
+</div>
+    <div style="width: 33%!important;" id="social-section" class="col-md-4">
+    <div class="box-sz" style="padding:0px 20px;padding-bottom: 15px;border-bottom:3.5px solid grey">
+              
+<a href="mailto:maza2pac77@gmail.com" style="text-decoration: none;">
+    <p class="footer-details"><i class="fa fa-envelope mr-5" aria-hidden="true"></i><span>maza2pac77@gmail.com</span></p>
+</a>
+    <p class="footer-details"><i class="fa fa-phone mr-5" aria-hidden="true"></i><span>+27 72348 4826</span></p>
+    <p class="footer-details"><i class="fa fa-fax mr-5" aria-hidden="true"></i><span>+27 6999 50266</span></p>
+    </div>
+
+<div id="social-media-icons">
+    <a href="https://www.facebook.com"><i class="fa fa-facebook-square social-media" aria-hidden="true"></i></a>
+    <a href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin-square social-media" aria-hidden="true"></i></a>
+    <a href="https://www.twitter.com"><i class="fa fa-twitter social-media" aria-hidden="true"></i></a>
+    <a href="https://github.com/Maza455"><i class="fa fa-github social-media" aria-hidden="true"></i></a>
+    <a href="https://www.instagram.com"><i class="fa fa-instagram social-media" aria-hidden="true"></i></a>
+</div>
+    </div>
+    </div>
+</div>
+      
+</section>
+
+<footer class="bg-dark text-white pt-5 pb-4" style="font-size: 18px;">
+    <div class="container text-md-left">
+    <div class="row text-md-left">
+    <div class="col mt-3" style="color:#808080;">
+        <h5 class="text-uppercase mb-4 font-weight-bold md-sz">Get to know Me</h5>
+    <p>
+        <a href="./about.html" class="text-white" style="text-decoration: none;">About</a>
+    </p>
+    <p>
+        <a href="./career.html" class="text-white" style="text-decoration: none;">Careers</a>
+    </p>
+        <!-- <p>
+          <a href="" class="text-white" style="text-decoration: none;">Press releases = future plans</a>
+        </p> -->
+        
+    <p>
+        <a href="#" class="text-white" style="text-decoration: none;">My Partner</a>
+    </p>
+</div>
+    <div class="col mt-3"  style="color:#808080;">
+    <h5 class="text-uppercase mb-4 font-weight-bold md-sz">Let me help you</h5>
+    <!-- <p>
+        <a href="./paypolicy.html" class="text-white" style="text-decoration: none;">Payments = future plans</a>
+    </p> -->
+         
+    <p>
+        <a href="" class="text-white" style="text-decoration: none;">Cancellation and Returns</a>
+    </p>
+          
+    <p>
+        <a href="#" class="text-white" style="text-decoration: none;">Contact Me</a>
+    </p>
+</div>
+      
+      
+<div class="col mt-3" style="color:#808080;">
+    <div>
+        <h5 class="text-uppercase mb-4 font-weight-bold md-sz">Reach Me</h5>
+    <p>
+        <a href="https://www.facebook.com" class="text-white" style="text-decoration: none;">
+            <i class="fab fa-facebook-square"></i>
+    Facebook
+    </a>
+    </p>
+
+    <p>
+    <a href="https://twitter.com" class="text-white" style="text-decoration: none;">
+            <i class="fab fa-twitter-square"></i>
+    Twitter
+    </a>
+    </p>
+
+    <p>
+        <a href="https://instagram.com" class="text-white" style="text-decoration: none;">
+            <i class="fab fa-instagram-square"></i>
+    Instagram
+</a>
+    </p>
+</div>
+</div>
+</div>
+
+<hr class="mb-4">
+    <div class="row align-items-center">
+    <div class="text-center">
+    Copyright &copy; and &reg; Since 2023 | Zukisa Proctor Maz@
+    </div>
+    </div>
+</div>
+</footer>
+    </div>
+    </nav>
+</section>
+  
 </body>
 </html>
