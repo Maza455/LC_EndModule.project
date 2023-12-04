@@ -27,14 +27,14 @@ img[alt='logo'] {
    padding: 0px;
 }
 .homeimg1 {
-background-image: url("./Images/home_img1.jpg");
+background-image: url("https://i.postimg.cc/Z5HcH5Mf/home-img1.jpg");
 height: 100vh;
 background-position:center;
 background-size:cover;
 background-attachment: fixed;
 }
 .homeimg2 {
-background-image: url("./Images/home_img2.jpg");
+background-image: url("https://i.postimg.cc/QxkkNMhX/home-img2.jpg");
 height: 100vh;
 background-position:center;
 background-size:cover;
@@ -42,9 +42,53 @@ background-attachment: fixed;
 }
 
 .homeimg3 {
-background-image: url("./Images/home_img3.jpg");
+background-image: url("https://i.postimg.cc/wM9MwgPV/home-img3.jpg");
 height: 100vh;
 background-position:center;
 background-size:cover;
 background-attachment: fixed;
+}
+
+
+@media screen and (max-width: 500px) {
+.nav-link{
+    font-size: 13px!important;
+}
+.dropdown-item{
+    font-size: 13px!important;
+}
+.line-in{
+    font-size: 13px!important; 
+}
+.btn{
+    font-size: 13px!important;
+}
+.home_slider .item .content h1 {
+    font-size: 2rem!important;
+}
+.home_slider .item .content p {
+    font-size: 1rem!important;
+}
+.home_slider .item .content .LandingPageButton {
+    font-size: 0.7rem!important;
+    padding:0.5rem 0.9rem!important;
+}
+}
+
+@media screen and (max-width: 425px) {
+.nav-link{
+    font-size: 11px!important;
+}
+.dropdown-item{
+    font-size: 11px!important;
+}
+.line-in{
+    font-size: 11px!important; 
+}
+.btn{
+    font-size: 11px!important;
+}
+.home_slider .item .content h1 {
+    font-size: 2rem!important;
+}
 }
