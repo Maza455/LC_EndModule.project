@@ -1,6 +1,6 @@
 // Cart Functionality
 
-let checkOut = JSON.parse(localStorage.getItem("cart")) ?
+let cart = JSON.parse(localStorage.getItem("cart")) ?
     JSON.parse(localStorage.getItem("cart")) :
     [];
 
@@ -39,22 +39,22 @@ function readBooks(items) {
 
 readBooks(cart)
 
-// UPDATE BOOK
+// UPDATE
 function updateCart(position) {
     let quantity = document.querySelector(`#addToCart${position}`).value;
     try {
-        if (quantity === checkOut[position].quantity) {
+        if (quantity === cart[position].quantity) {
             throw new Error("You did not make any changes")
         }
 
-        checkOut[position] = ({
-            ...checkOut[position],
+        cart[position] = ({
+            ...cart[position],
             quantity
         })
 
-        localStorage.setItem("cart", JSON.stringify(checkOut));
-        console.log(checkOut[position].quantity)
-        readBooks(checkOut)
+        localStorage.setItem("cart", JSON.stringify(cart));
+        console.log(cart[position].quantity)
+        readBooks(cart)
 
     } catch (error) {
         alert(error)
@@ -62,16 +62,16 @@ function updateCart(position) {
 
 }
 
-// REMOVE BOOK
+// REMOVE
 function removeCart(position) {
     let confirmation = confirm(
-        `Are you sure you want to remove ${checkOut[position].title}?`
+        `Are you sure you want to remove ${cart[position].title}?`
     );
 
     if (confirmation) {
-        checkOut.splice(position, 1);
-        localStorage.setItem("cart", JSON.stringify(checkOut));
-        readBooks(checkOut);
+        cart.splice(position, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        readBooks(cart);
     }
     totalCost();
 }
@@ -99,8 +99,9 @@ function checkout() {
         `Your totalcost is ${totalCost()}`
     );
     if (confirmation) {
-        checkOut.length = 0
+        cart.length = 0
         localStorage.removeItem('cart')
-        readBooks(checkOut)
+        readBooks(cart)
     }
+
 }
