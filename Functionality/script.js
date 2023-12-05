@@ -12,8 +12,9 @@ $('#owl_carousel .owl-carousel').owlCarousel({
 });
 });
 
-// scroll to to button
 
+
+// scroll to to button
 const btnScrollToTop = document.querySelector("#btnScrollToTop");
     btnScrollToTop.addEventListener("click", () => {
         window.scrollTo(0, 0);
