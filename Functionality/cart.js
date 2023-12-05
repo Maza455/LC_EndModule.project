@@ -1,0 +1,106 @@
+// Cart Functionality
+
+let checkOut = JSON.parse(localStorage.getItem("cart")) ?
+    JSON.parse(localStorage.getItem("cart")) :
+    [];
+
+function readBooks(items) {
+    document.querySelector("#cart").innerHTML = "";
+    items.forEach((product, position) => {
+        document.querySelector("#cart").innerHTML += `
+        
+        <div class="card main">
+          <img src="${product.image}" class="card-Image-top" alt="${product.title}">
+          
+          <div class="card-body">
+            <h4 class="card-title">${product.title}</h4>
+            <p><strong> ${product.title} by ${product.author} </strong>- ${product.year} </p>
+            <p class="card-text">R<strong> ${parseInt(product.price)}</strong></p>
+            </div>
+            <div d-flex>
+            <input type="number" value=${product.quantity} class="cart" min=1 id="addToCart${position}">
+            </div>
+          
+            <div>
+            <button type="button" class="btn btn-primary" onclick="updateCart(${position})" ><i class='fas fa-edit'></i>
+          <p class="write">Update</p>
+        </button>
+        <button type="button" class="btn btn-danger" onclick="removeCart(${position})" ><i class='fas fa-trash-alt'></i>
+        <p class="write">Remove</p>
+        </button>
+      </div>
+
+    </div>
+            `
+    })
+
+    document.querySelector("#cost").innerHTML = `Total: R${ totalCost() }`
+}
+
+readBooks(cart)
+
+// UPDATE BOOK
+function updateCart(position) {
+    let quantity = document.querySelector(`#addToCart${position}`).value;
+    try {
+        if (quantity === checkOut[position].quantity) {
+            throw new Error("You did not make any changes")
+        }
+
+        checkOut[position] = ({
+            ...checkOut[position],
+            quantity
+        })
+
+        localStorage.setItem("cart", JSON.stringify(checkOut));
+        console.log(checkOut[position].quantity)
+        readBooks(checkOut)
+
+    } catch (error) {
+        alert(error)
+    }
+
+}
+
+// REMOVE BOOK
+function removeCart(position) {
+    let confirmation = confirm(
+        `Are you sure you want to remove ${checkOut[position].title}?`
+    );
+
+    if (confirmation) {
+        checkOut.splice(position, 1);
+        localStorage.setItem("cart", JSON.stringify(checkOut));
+        readBooks(checkOut);
+    }
+    totalCost();
+}
+
+//REMOVE MULTIPLE 
+function removeMultiple(position) {
+
+}
+
+// Total Cost
+function totalCost() {
+    let totalCost = 0
+    items = JSON.parse(localStorage.getItem("cart"))
+    for (let i = 0; i < items.length; i++) {
+
+        totalCost += items[i].price * items[i].quantity;
+
+    }
+    return parseInt(totalCost)
+}
+
+// Checkout
+function checkout() {
+    let confirmation = confirm(
+        `Your totalcost is ${totalCost()}`
+    );
+    if (confirmation) {
+        checkOut.length = 0
+        localStorage.removeItem('cart')
+        readBooks(checkOut)
+    }
+}
