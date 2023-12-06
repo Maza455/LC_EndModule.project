@@ -73,149 +73,137 @@
                 </nav>
                 </section>
 
-      <section>
-            <li class="nav-item">
-              <!-- Button trigger modal -->
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#addProductModal"
-              >
-                Add a product
-              </button>
-
-              <!-- Modal -->
-              <div
-                class="modal fade"
-                id="addProductModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">
-                        Add product
-                      </h5>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="mb-3">
-                        <label for="addTitle" class="form-label">Title</label>
-                        <input
-                          class="form-control"
-                          type="text"
-                          name="addTitle"
-                          id="addTitle"
-                        />
+                <div class="product" style="overflow-x: auto;">
+                  <table>
+                    <tr>
+                    <td>
+                        <section>
+                            <li class="nav-item">
+                              <!-- Button trigger modal -->
+                              <button
+                                type="button"
+                                class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#addProductModal"
+                              >
+                                Add a product
+                              </button>
+                
+                              <!-- Modal -->
+                              <div
+                                class="modal fade"
+                                id="addProductModal"
+                                tabindex="-1"
+                                aria-labelledby="exampleModalLabel"
+                                aria-hidden="true"
+                              >
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">
+                                        Add product
+                                      </h5>
+                                      <button
+                                        type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                      ></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="mb-3">
+                                        <label for="addTitle" class="form-label">Title</label>
+                                        <input
+                                          class="form-control"
+                                          type="text"
+                                          name="addTitle"
+                                          id="addTitle"
+                                        />
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="addAuthor" class="form-label">Author</label>
+                                        <input
+                                          class="form-control"
+                                          type="text"
+                                          name="addAuthor"
+                                          id="addAuthor"
+                                        />
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="" class="form-label">Edition</label>
+                                        <select
+                                          class="form-select"
+                                          name="addEdition"
+                                          id="addEdition"
+                                        >
+                                          <option value="Penguin">Penguin</option>
+                                          <option value="Harcourt Brace">Harcourt Brace</option>
+                                          <option value="Random House">Random House</option>
+                                          <option value="Harper Perennial">
+                                            Harper Perennial
+                                          </option>
+                                          <option value="Signet Classics">
+                                            Signet Classics
+                                          </option>
+                                        </select>
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="addYear" class="form-label"
+                                          >Year Published</label
+                                        >
+                                        <input
+                                          class="form-control"
+                                          type="number"
+                                          name="addYear"
+                                          id="addYear"
+                                        />
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="addPrice" class="form-label">Price</label>
+                                        <input
+                                          class="form-control"
+                                          type="text"
+                                          name="addPrice"
+                                          id="addPrice"
+                                        />
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="addImage" class="form-label"
+                                          >Image URL</label
+                                        >
+                                        <input
+                                          class="form-control"
+                                          type="text"
+                                          name="addImage"
+                                          id="addImage"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button
+                                        type="button"
+                                        class="btn btn-secondary"
+                                        data-bs-dismiss="modal"
+                                      >
+                                        Close
+                                      </button>
+                                      <button
+                                        type="button"
+                                        class="btn btn-primary"
+                                        data-bs-dismiss="modal"
+                                        onclick="createBook()"
+                                      >
+                                        Add Book
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                      <div class="mb-3">
-                        <label for="addAuthor" class="form-label">Author</label>
-                        <input
-                          class="form-control"
-                          type="text"
-                          name="addAuthor"
-                          id="addAuthor"
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label for="" class="form-label">Edition</label>
-                        <select
-                          class="form-select"
-                          name="addEdition"
-                          id="addEdition"
-                        >
-                          <option value="Penguin">Penguin</option>
-                          <option value="Harcourt Brace">Harcourt Brace</option>
-                          <option value="Random House">Random House</option>
-                          <option value="Harper Perennial">
-                            Harper Perennial
-                          </option>
-                          <option value="Signet Classics">
-                            Signet Classics
-                          </option>
-                        </select>
-                      </div>
-                      <div class="mb-3">
-                        <label for="addYear" class="form-label"
-                          >Year Published</label
-                        >
-                        <input
-                          class="form-control"
-                          type="number"
-                          name="addYear"
-                          id="addYear"
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label for="addPrice" class="form-label">Price</label>
-                        <input
-                          class="form-control"
-                          type="text"
-                          name="addPrice"
-                          id="addPrice"
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label for="addImage" class="form-label"
-                          >Image URL</label
-                        >
-                        <input
-                          class="form-control"
-                          type="text"
-                          name="addImage"
-                          id="addImage"
-                        />
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-bs-dismiss="modal"
-                        onclick="createBook()"
-                      >
-                        Add Book
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <hr class="text-white" />
-
-    <marquee width="100%" direction="right" height="40px">
-      <h3 class="text-center text-white">
-        The reads of all times <span class="dot text-dark">&middot;</span> Come
-        let's exercise your muscle <span class="dot text-dark">&middot;</span>
-      </h3>
-    </marquee>
-
-    <hr class="text-white" />
-
-    <h1 class="text-white text-center display-1 bg-dark">
-      Let's Read Together!
-    </h1>
-    <hr class="text-white" />
+                    </nav>
 
     <!-- SORT ITEMS -->
     <div class="container d-flex justify-content-start mb-3 mt-5 pt-4">

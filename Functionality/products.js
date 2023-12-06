@@ -1,4 +1,24 @@
 // Products Functionality
+function searchBooks() {
+  const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+  const filteredBooks = books.filter(book => book.title.toLowerCase().includes(searchQuery) || book.author.toLowerCase().includes(searchQuery));
+
+  const searchResults = document.getElementById("searchResults");
+  searchResults.innerHTML = "";
+
+  filteredBooks.forEach(book => {
+    const bookDiv = document.createElement("div");
+    bookDiv.innerHTML = `
+      <img src="${book.image}" alt="${book.title}">
+      <h3>${book.title}</h3>
+      <p>Author: ${book.author}</p>
+      <p>Edition: ${book.edition}</p>
+      <p>Year: ${book.year}</p>
+      <p>Price: $${book.price}</p>
+    `;
+    searchResults.appendChild(bookDiv);
+  });
+}
 
 // Admin functionality
 let books = JSON.parse(localStorage.getItem("Products")) ?
@@ -285,24 +305,6 @@ function sortEdition() {
     console.log(foundBooks);
 }
 
-// SORT BY NAME
-
-function sortName() {
-    let direction = document.querySelector("#sortTitle").value;
-
-    let sortedBooks = books.sort((a, b) => {
-        if (a.title.toLowerCase() < b.title.toLowerCase()) {
-            return -1;
-        }
-        if (a.title.toLowerCase() > b.title.toLowerCase()) {
-            return 1;
-        }
-        return 0;
-    });
-    if (direction == "descending") sortedBooks.reverse();
-    console.log(sortedBooks);
-    readBooks(books);
-}
 
 // SORT BY PRICE
 
