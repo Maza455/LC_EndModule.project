@@ -18,6 +18,15 @@ img[alt='logo'] {
     aspect-ratio: 1/1;
 }
 
+#search-results {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
 #owl_carousel {
     width: 100% !important;
     position: fixed !important;

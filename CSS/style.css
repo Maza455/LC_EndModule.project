@@ -8,6 +8,15 @@
     box-sizing: border-box;
 }
 
+#search-results {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
 :root {
     --primary-background: #fff;
     --primary-border-card: rgba(0, 0, 0, 0.125);
