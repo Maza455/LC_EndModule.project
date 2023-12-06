@@ -8,14 +8,49 @@
     box-sizing: border-box;
 }
 
-#search-results {
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  transition: width 0.4s;
+}
+
+input[type="text"]:focus {
+  width: 100%;
+}
+
+button[type="button"] {
+  background-color: #2196F3;
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.4s;
+}
+
+button[type="button"]:hover {
+  background-color: indigo;
+}
+
+/* #search-results {
   display: none;
   position: absolute;
   z-index: 100;
   background-color: white;
   border: 1px solid #ccc;
   width: 100%;
-}
+} */
 
 :root {
     --primary-background: #fff;
