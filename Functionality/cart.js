@@ -53,7 +53,7 @@ function updateCart(position) {
         })
 
         localStorage.setItem("cart", JSON.stringify(cart));
-        console.log(cart[position].quantity)
+        cart[position].quantity
         readBooks(cart)
 
     } catch (error) {

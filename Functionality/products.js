@@ -1,118 +1,118 @@
 // Products Functionality
 
 // Admin functionality
-let books = JSON.parse(localStorage.getItem("Books")) ?
-    JSON.parse(localStorage.getItem("Books")) :
+let books = JSON.parse(localStorage.getItem("Products")) ?
+    JSON.parse(localStorage.getItem("Products")) :
     [{
-            image: "https://i.postimg.cc/0QyQ3P5k/AbbeyN.jpg",
-            title: "Northanger Abbey",
-            author: "Austen, Jane",
-            year: 1814,
+            image: "https://i.postimg.cc/L4C163mN/91h-Uer84-Pp-L-AC-UF1000-1000-QL80.jpg",
+            title: "JavaScript",
+            author: "David, Flanagan",
             edition: "Penguin",
-            price: 199.99,
+            year: 1914,
+            price: 399.99,
         },
         {
             image: "https://i.postimg.cc/JzLTxm9s/space-black-apple-watch-over-black-iphone-x.jpg",
             title: "space-black-apple-watch-over-black-iphone-x",
             author: "iStore",
-            year: 2015,
             edition: "Penguin",
+            year: 2015,
             price: 11159.99,
         },
         {
             image: "https://i.postimg.cc/dQ7dtjvq/AnnaK.jpg",
             title: "Anna Karenina",
             author: "Tolstoy, Leo",
-            year: 1875,
             edition: "Penguin",
+            year: 1875,
             price: 119.99,
         },
         {
             image: "https://i.postimg.cc/Vvz7H211/images-8.jpg",
             title: "Mrs. Dalloway",
-            author: "Woolf, Virginia",
-            year: 1925,
+            author: "Pro, Iphone",
             edition: "Harcourt Brace",
-            price: 249.99,
+            year: 1925,
+            price: 7249.99,
         },
         {
             image: "https://i.postimg.cc/CLg1TGxr/hours.jpg",
             title: "The Hours",
             author: "Cunnningham, Michael",
-            year: 1999,
             edition: "Harcourt Brace",
+            year: 1999,
             price: 220.00,
         },
         {
             image: "https://i.postimg.cc/SRK694kX/download-8.jpg",
             title: "Huckleberry Finn",
             author: "Twain, Mark",
-            year: 1865,
             edition: "Penguin",
+            year: 1865,
             price: 70.00,
         },
         {
             image: "https://i.postimg.cc/BbNRzf60/house.jpg",
             title: "Bleak House",
             author: "Dickens, Charles",
-            year: 1870,
             edition: "Random House",
+            year: 1870,
             price: 70.00,
         },
         {
             image: "https://i.postimg.cc/d0mrS30k/Apple-September-Event-2021-Wallpapers.jpg",
             title: "Tom Sawyer",
             author: "Twain, Mark",
-            year: 1862,
             edition: "Random House",
+            year: 1862,
             price: 85.00,
         },
         {
             image: "https://i.postimg.cc/GhVXmm6f/RoomOne.jpg",
             title: "A Room of One's Own",
             author: "Woolf, Virginia",
-            year: 1922,
             edition: "Penguin",
+            year: 1922,
             price: 329.99,
         },
         {
             image: "https://i.postimg.cc/8k3RhnwJ/Harry-Potter.jpg",
             title: "Harry Potter",
             author: "Rowling, J.K.",
-            year: 2000,
             edition: "Harcourt Brace",
+            year: 2000,
             price: 260.00,
         },
         {
             image: "https://i.postimg.cc/BZRNd8gt/Hundred.jpg",
             title: "One Hundred Years of Solitude",
             author: "Marquez",
-            year: 1967,
             edition: "Harper Perennial",
+            year: 1967,
             price: 170.00,
         },
         {
             image: "https://i.postimg.cc/y63yX1HK/Hamlet.jpg",
             title: "Hamlet, Prince of Denmark",
             author: "Shakespeare",
-            year: 1603,
             edition: "Signet Classics",
+            year: 1603,
             price: 130.00,
         },
         {
             image: "https://i.postimg.cc/nckjqgCZ/Lord-Rings.jpg",
             title: "Lord of the Rings",
             author: "Tolkien, J.R.",
-            year: 1937,
             edition: "Penguin",
+            year: 1937,
             price: 741.00,
         },
         {
-            image: "https://i.postimg.cc/7Z5HbWzK/GOT.jpg",
-            title: "A Game of Thrones",
-            author: "George R. R. Martin",
-            year: 1996,
+            image: "https://i.postimg.cc/9MH6vn80/Classic-Books-about-Java-Script-Eloquent-Java-Script-1024x808.jpg",
+            title: "Eloquent JavaScript",
+            author: "Marijin Heverbeke",
             edition: "Penguin",
+            year: 2006,
             price: 879.00,
         },
     ];
@@ -121,24 +121,6 @@ let checkOut = JSON.parse(localStorage.getItem("cart")) ?
     JSON.parse(localStorage.getItem("cart")) :
     [];
 
-
-// Filter the people array by the given search term and display the results
-function searchItems(searchTerm) {
-    const filteredItems = items.filter(items => {
-      return items.name.first.toLowerCase().includes(searchTerm.toLowerCase());
-    });
-    displayItems(filteredItems);
-  }
-
-// Event listeners
-searchInput.addEventListener('input', event => {
-    const searchTerm = event.target.value.trim();
-    if (searchTerm === '') {
-      displayItems(items);
-    } else {
-      searchItems(searchTerm);
-    }
-});
 
 // READ BOOKS
 function readBooks(items) {
@@ -158,15 +140,6 @@ function readBooks(items) {
             <button type="button" class="btn btn-secondary addToCart"  onclick="addToCart( ${position} )"><i class='fas fa-cart-plus'></i>
             <p class="write">Add to Cart</p>
             </button>
-            
-          
-            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#editBook${position}" ><i class='fas fa-edit'></i>
-             <p class="write"> Edit</p>
-            </button>
-            <button type="button" class="btn btn-dark" onclick="deleteBook(${position})" ><i class='fas fa-trash-alt'></i>
-            <p class="write">Delete</p>
-            </button>
-            </div>
             
             <!-- Modal Class -->
             <div
