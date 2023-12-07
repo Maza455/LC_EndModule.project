@@ -3,101 +3,100 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    text-align: center;
-    grid-template-rows: auto minmax(100%, 100svh) auto;
+  text-align: center;
+  grid-template-rows: auto minmax(100%, 100svh) auto;
 }
 
-img[alt='logo'] {
-    width: 5rem;
-    aspect-ratio: 1/1;
+img[alt="logo"] {
+  width: 5rem;
+  aspect-ratio: 1/1;
 }
 
 #search-results {
-    display: none;
-    position: absolute;
-    z-index: 100;
-    background-color: white;
-    border: 1px solid #ccc;
-    width: 100%;
+  display: none;
+  position: absolute;
+  z-index: 100;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 100%;
 }
 
 #owl_carousel {
-    width: 100% !important;
-    position: fixed !important;
+  width: 100% !important;
+  position: fixed !important;
 }
 .Main {
-   margin:0px ;
-   padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 .homeimg1 {
-background-image: url("https://i.postimg.cc/JzLTxm9s/space-black-apple-watch-over-black-iphone-x.jpg");
-height: 100vh;
-background-position:center;
-background-size:cover;
-background-attachment: fixed;
+  background-image: url("https://i.postimg.cc/HxFKfh56/Proctor.png");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .homeimg2 {
-background-image: url("https://i.postimg.cc/QxkkNMhX/home-img2.jpg");
-height: 100vh;
-background-position:center;
-background-size:cover;
-background-attachment: fixed;
+  background-image: url("https://i.postimg.cc/QxkkNMhX/home-img2.jpg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .homeimg3 {
-background-image: url("https://i.postimg.cc/qqpRQNXm/mockup-featuring-two-iphones-12-pro-against-a-solid-color-background-5011-el1.png");
-height: 100vh;
-background-position:center;
-background-size:cover;
-background-attachment: fixed;
+  background-image: url("https://i.postimg.cc/qqpRQNXm/mockup-featuring-two-iphones-12-pro-against-a-solid-color-background-5011-el1.png");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
-
 
 @media screen and (max-width: 500px) {
-.nav-link{
-    font-size: 13px!important;
-}
-.dropdown-item{
-    font-size: 13px!important;
-}
-.line-in{
-    font-size: 13px!important; 
-}
-.btn{
-    font-size: 13px!important;
-}
-.home_slider .item .content h1 {
-    font-size: 2rem!important;
-}
-.home_slider .item .content p {
-    font-size: 1rem!important;
-}
-.home_slider .item .content .LandingPageButton {
-    font-size: 0.7rem!important;
-    padding:0.5rem 0.9rem!important;
-}
+  .nav-link {
+    font-size: 13px !important;
+  }
+  .dropdown-item {
+    font-size: 13px !important;
+  }
+  .line-in {
+    font-size: 13px !important;
+  }
+  .btn {
+    font-size: 13px !important;
+  }
+  .home_slider .item .content h1 {
+    font-size: 2rem !important;
+  }
+  .home_slider .item .content p {
+    font-size: 1rem !important;
+  }
+  .home_slider .item .content .LandingPageButton {
+    font-size: 0.7rem !important;
+    padding: 0.5rem 0.9rem !important;
+  }
 }
 
 @media screen and (max-width: 425px) {
-.nav-link{
-    font-size: 11px!important;
-}
-.dropdown-item{
-    font-size: 11px!important;
-}
-.line-in{
-    font-size: 11px!important; 
-}
-.btn{
-    font-size: 11px!important;
-}
-.home_slider .item .content h1 {
-    font-size: 2rem!important;
-}
+  .nav-link {
+    font-size: 11px !important;
+  }
+  .dropdown-item {
+    font-size: 11px !important;
+  }
+  .line-in {
+    font-size: 11px !important;
+  }
+  .btn {
+    font-size: 11px !important;
+  }
+  .home_slider .item .content h1 {
+    font-size: 2rem !important;
+  }
 }
