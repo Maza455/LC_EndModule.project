@@ -89,9 +89,13 @@
                 </div>
             </div> -->
 
-            <input type="text" id="searchInput" placeholder="Search for a book...">
-            <button onclick="searchBooks()">Search</button>
-            <div id="searchResults"></div>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" onkeyup="searchBooks()" placeholder="Search..." style="text-align: center;">
+                <button class="search-button">Search</button>
+              </div>
+            
+              <div id="searchResults">
+              </div>
     
     
         <!-- SORT ITEMS -->

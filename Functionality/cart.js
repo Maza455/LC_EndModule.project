@@ -1,8 +1,7 @@
 // Cart Functionality
 
 let cart = JSON.parse(localStorage.getItem("cart")) ?
-    JSON.parse(localStorage.getItem("cart")) :
-    [];
+    JSON.parse(localStorage.getItem("cart")) : [];
 
 function readBooks(items) {
     document.querySelector("#cart").innerHTML = "";
