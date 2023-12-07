@@ -156,7 +156,6 @@ function readBooks(items) {
             <p> by ${book.author} - ${book.year} </p>
             <p class="card-text">R<strong> ${parseInt(book.price)}</strong></p>
             <div d-flex-nowrap>
-            <input type="number" value=1 class="cart" min=1 id="addToCart${position}">
             <button type="button" class="btn btn-secondary addToCart"  onclick="addToCart( ${position} )"><i class='fas fa-cart-plus'></i>
             <p class="write">Add to Cart</p>
             </button>
