@@ -41,38 +41,6 @@ let books = JSON.parse(localStorage.getItem("Books")) ?
             edition: "Harcourt Brace",
             price: 220.00,
         },
-        {
-            image: "https://i.postimg.cc/vmWqjwqN/TomS.jpg",
-            title: "Tom Sawyer",
-            author: "Twain, Mark",
-            year: 1862,
-            edition: "Random House",
-            price: 85.00,
-        },
-        {
-            image: "https://i.postimg.cc/8k3RhnwJ/Harry-Potter.jpg",
-            title: "Harry Potter",
-            author: "Rowling, J.K.",
-            year: 2000,
-            edition: "Harcourt Brace",
-            price: 260.00,
-        },
-        {
-            image: "https://i.postimg.cc/BZRNd8gt/Hundred.jpg",
-            title: "One Hundred Years of Solitude",
-            author: "Marquez",
-            year: 1967,
-            edition: "Harper Perennial",
-            price: 170.00,
-        },
-        {
-            image: "https://i.postimg.cc/nckjqgCZ/Lord-Rings.jpg",
-            title: "Lord of the Rings",
-            author: "Tolkien, J.R.",
-            year: 1937,
-            edition: "Penguin",
-            price: 741.00,
-        },
     ];
 
 let checkOut = JSON.parse(localStorage.getItem("cart")) ?
