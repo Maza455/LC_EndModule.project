@@ -43,7 +43,7 @@ function updateCart(position) {
     let quantity = document.querySelector(`#addToCart${position}`).value;
     try {
         if (quantity === cart[position].quantity) {
-            throw new Error("You did not make any changes")
+            throw new Error("You did not make any changes👌")
         }
 
         cart[position] = ({
@@ -52,7 +52,7 @@ function updateCart(position) {
         })
 
         localStorage.setItem("cart", JSON.stringify(cart));
-        cart[position].quantity
+        // cart[position].quantity
         readBooks(cart)
 
     } catch (error) {
@@ -65,7 +65,7 @@ function updateCart(position) {
 // REMOVE
 function removeCart(position) {
     let confirmation = confirm(
-        `Are you sure you want to remove ${cart[position].title}?`
+        `Are you sure you want to remove ${cart[position].title}?⚠️`
     );
 
     if (confirmation) {
@@ -92,7 +92,7 @@ function totalCost() {
 
 // Clear Cart
 function clearCart() {
-    let confirmation = confirm("Are you sure you want to clear the cart?");
+    let confirmation = confirm("Are you sure you want to clear the cart? wait, wait are you sure😂");
     if (confirmation) {
         cart = [];
         localStorage.removeItem('cart');
