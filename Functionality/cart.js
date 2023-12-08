@@ -61,6 +61,7 @@ function updateCart(position) {
 
 }
 
+
 // REMOVE
 function removeCart(position) {
     let confirmation = confirm(
@@ -75,10 +76,7 @@ function removeCart(position) {
     totalCost();
 }
 
-//REMOVE MULTIPLE 
-function removeMultiple(position) {
 
-}
 
 // Total Cost
 function totalCost() {
@@ -92,15 +90,15 @@ function totalCost() {
     return parseInt(totalCost)
 }
 
-// Checkout
-function checkout() {
-    let confirmation = confirm(
-        `Your totalcost is ${totalCost()}`
-    );
+// Clear Cart
+function clearCart() {
+    let confirmation = confirm("Are you sure you want to clear the cart?");
     if (confirmation) {
-        cart.length = 0
-        localStorage.removeItem('cart')
-        readBooks(cart)
+        cart = [];
+        localStorage.removeItem('cart');
+        readBooks(cart);
     }
-
 }
+
+
+

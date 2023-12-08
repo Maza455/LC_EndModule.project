@@ -264,10 +264,11 @@ function addToCart(position) {
         quantity,
         ...books[position]
     });
-    // cart.push({...books[position]});
+  
     localStorage.setItem("cart", JSON.stringify(checkOut));
     console.log(checkOut);
 }
+
 
 
 // SORT
