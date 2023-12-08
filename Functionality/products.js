@@ -253,25 +253,20 @@ readBooks(books);
 
 // CART
 function addToCart(position) {
-  let quantity = document.querySelector(`#addToCart${position}`).value;
+  let quantity = 1;
   checkOut.push({
     quantity,
     ...books[position]
   });
-  //cart.push({...books[position]});
   localStorage.setItem("cart", JSON.stringify(checkOut));
   console.log(checkOut);
 }
 
 function searchBooks() {
   let searchQry = document.getElementById("searchInput").value.toLowerCase();
-  let filteredPro = books.filter(book =>
-    book.title.toLowerCase().includes(searchQry) || book.author.toLowerCase().includes(searchQry)
-  );
-
+  let filteredPro = books.filter(book => book.title.toLowerCase().includes(searchQry) || book.author.toLowerCase().includes(searchQry));
   let srchRslts = document.getElementById("searchResults");
   srchRslts.innerHTML = "";
-
   filteredPro.forEach(book => {
     let bookDiv = document.createElement("div");
     bookDiv.innerHTML += `
